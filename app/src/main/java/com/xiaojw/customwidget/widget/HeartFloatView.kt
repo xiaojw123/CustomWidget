@@ -4,6 +4,7 @@ import android.animation.*
 import android.content.Context
 import android.graphics.Point
 import android.graphics.PointF
+import android.os.Handler
 import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
@@ -15,21 +16,20 @@ class HeartFloatView @JvmOverloads constructor(context: Context, attrs: Attribut
     private var mContext: Context? = null
     private var mWidth: Int = 0
     private var mHeight: Int = 0
+    var mHanlder: Handler
+
 
     init {
-        init(context)
+        mContext = context
+        mHanlder = Handler()
     }
 
-    private fun init(context: Context) {
-        mContext = context
-    }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         mWidth = measuredWidth
         mHeight = measuredHeight
     }
-
 
 
     fun addHeart() {
@@ -50,7 +50,7 @@ class HeartFloatView @JvmOverloads constructor(context: Context, attrs: Attribut
             val y = Math.max(point.y - heartHegiht, 0f)
             heartView.x = x
             heartView.y = y
-            heartView.alpha=1-animation.animatedFraction
+            heartView.alpha = 1 - animation.animatedFraction
         }
 //        val alphaAnimtoer = ObjectAnimator.ofFloat(heartView, "alpha", 0.1f, 1f)
 //        val scalexAnimtoer = ObjectAnimator.ofFloat(heartView, "scaleX", 0.1f, 1f)
@@ -63,7 +63,11 @@ class HeartFloatView @JvmOverloads constructor(context: Context, attrs: Attribut
         bizAnimator.addListener(object : AnimatorListenerAdapter() {
 
             override fun onAnimationEnd(animation: Animator) {
-                removeView(heartView)
+                mHanlder.post(object : Runnable {
+                    override fun run() {
+                        removeView(heartView)
+                    }
+                })
             }
         })
         bizAnimator.start()

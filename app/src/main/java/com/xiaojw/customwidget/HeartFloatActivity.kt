@@ -11,10 +11,12 @@ import com.xiaojw.customwidget.widget.HeartFloatView
 
 class HeartFloatActivity : Activity() {
     lateinit var heartFloatView: HeartFloatView
+    var mHanlder: Handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wave_heart)
+
         heartFloatView = findViewById(R.id.float_heartview);
     }
 
