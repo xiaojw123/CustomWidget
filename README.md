@@ -1,2 +1,8 @@
 # CustomWidget
-Android×Ô¶¨ÒåView
+
+TimeClockView
+
+<img src="img/pic1.png" width="390"/>
+
+HeartFloatView
+
