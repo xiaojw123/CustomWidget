@@ -1,3 +1,6 @@
 # CustomWidget
-<img src="img/pl1.png" width="375"/>
+
+TimeClockView
+<img src="img/pic1.png" width="390"/>
+HeartFloatView
 
