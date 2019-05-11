@@ -3,12 +3,9 @@ package com.xiaojw.customwidget
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Path
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
-import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
 import com.xiaojw.customwidget.util.ScreenSize
@@ -31,5 +28,9 @@ class MainActivity : Activity() {
 
     fun gotoTimeClock(view: View) {
         startActivity(Intent(this@MainActivity,TimeCActivity::class.java))
+    }
+
+    fun gotoWaveHeart(view: View){
+        startActivity(Intent(this@MainActivity,HeartFloatActivity::class.java))
     }
 }
