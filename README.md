@@ -6,3 +6,5 @@ TimeClockView
 
 HeartFloatView
 
+<img src="img/pic2.gif" width="390"/>
+
