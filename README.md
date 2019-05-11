@@ -1,2 +1,3 @@
 # CustomWidget
-Android×Ô¶¨ÒåView
+<img src="img/pl1.png" width="375"/>
+
