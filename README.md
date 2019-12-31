@@ -9,3 +9,7 @@ HeartFloatView
 
 <img src="img/pic2.gif" width="390"/>
 
+CardLayoutManager
+
+
+<img src="img/pic3.gif" width="390"/>
