@@ -1,10 +1,10 @@
-package com.xiaojw.customwidget
+package com.xiaojw.customwidget.activity
 
 import android.app.Activity
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.xiaojw.customwidget.R
 
-class TimeCActivity : Activity() {
+class TimeCActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

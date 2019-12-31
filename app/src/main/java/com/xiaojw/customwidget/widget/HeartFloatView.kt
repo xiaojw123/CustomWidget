@@ -2,11 +2,9 @@ package com.xiaojw.customwidget.widget
 
 import android.animation.*
 import android.content.Context
-import android.graphics.Point
 import android.graphics.PointF
 import android.os.Handler
 import android.util.AttributeSet
-import android.view.View
 import android.widget.RelativeLayout
 
 import java.util.Random

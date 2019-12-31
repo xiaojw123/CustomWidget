@@ -1,6 +1,5 @@
-package com.xiaojw.customwidget
+package com.xiaojw.customwidget.activity
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +7,10 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
+import com.xiaojw.customwidget.R
 import com.xiaojw.customwidget.util.ScreenSize
 
-class MainActivity : Activity() {
+class MainActivity : BaseActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +27,17 @@ class MainActivity : Activity() {
     }
 
     fun gotoTimeClock(view: View) {
-        startActivity(Intent(this@MainActivity,TimeCActivity::class.java))
+        startActivity(Intent(this@MainActivity, TimeCActivity::class.java))
     }
 
     fun gotoWaveHeart(view: View){
-        startActivity(Intent(this@MainActivity,HeartFloatActivity::class.java))
+        startActivity(Intent(this@MainActivity, HeartFloatActivity::class.java))
+    }
+    fun gotoHeartImg(view:View){
+        startActivity(Intent(this@MainActivity, NonRectImgActivity::class.java))
+    }
+    fun gotoLayoutManger(view:View){
+        startActivity(Intent(this@MainActivity,LayoutManagerActivity::class.java))
+
     }
 }

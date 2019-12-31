@@ -1,15 +1,13 @@
-package com.xiaojw.customwidget
+package com.xiaojw.customwidget.activity
 
 import android.app.Activity
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.os.Message
 import android.view.MotionEvent
-import android.view.View
+import com.xiaojw.customwidget.R
 import com.xiaojw.customwidget.widget.HeartFloatView
 
-class HeartFloatActivity : Activity() {
+class HeartFloatActivity : BaseActivity() {
     lateinit var heartFloatView: HeartFloatView
     var mHanlder: Handler = Handler()
 

@@ -6,4 +6,4 @@
                                               xmlns:app="http://schemas.android.com/apk/res-auto"
                                               app:circle_raduis="160dp"
                                               app:circle_color="@color/colorAccent"
-                                              tools:context=".TimeCActivity"/>
+                                              tools:context=".activity.TimeCActivity"/>
