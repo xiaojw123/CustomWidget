@@ -40,4 +40,10 @@ class MainActivity : BaseActivity() {
         startActivity(Intent(this@MainActivity,LayoutManagerActivity::class.java))
 
     }
+
+    fun gotoCirleRecycler(view: View) {
+        startActivity(Intent(this@MainActivity,CircleRecyclerActivity::class.java))
+
+
+    }
 }

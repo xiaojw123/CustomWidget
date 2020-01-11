@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activity.CircleRecyclerActivity">
+
+
+    <ImageView
+            android:id="@+id/cr_bg_img"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+
+
+
+
+       <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="#2033b5e5"
+               />
+
+
+
+        <com.xiaojw.customwidget.widget.rv.CircleRecyclerView
+                android:layout_gravity="right|bottom"
+                android:id="@+id/cr_menu_rlv"
+                android:layout_width="184dp"
+                android:layout_height="200dp"
+                />
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp"
+            android:text="控制"
+            android:onClick="ctrlMenu"
+            />
+
+
+
+
+
+
+</merge>

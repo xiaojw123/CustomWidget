@@ -50,6 +50,14 @@
             android:onClick="gotoLayoutManger"
     />
 
+    <Button
+            style="@style/ButtonTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn3"
+            android:layout_marginTop="20dp"
+            android:text="RecyclerView环形菜单"
+            android:onClick="gotoCirleRecycler"
+            />
 
     <TextView
             android:id="@+id/main_screen_tv"
