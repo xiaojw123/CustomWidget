@@ -1,20 +1,18 @@
 package com.xiaojw.customwidget.activity
 
-import android.app.Activity
-import android.os.Bundle
-import android.os.Handler
 import android.view.MotionEvent
 import com.xiaojw.customwidget.R
 import com.xiaojw.customwidget.widget.HeartFloatView
 
 class HeartFloatActivity : BaseActivity() {
-    lateinit var heartFloatView: HeartFloatView
-    var mHanlder: Handler = Handler()
+    private lateinit var heartFloatView: HeartFloatView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wave_heart)
 
+    override fun getLayoutRes(): Int {
+        return R.layout.activity_wave_heart
+    }
+
+    override fun initView() {
         heartFloatView = findViewById(R.id.float_heartview);
     }
 

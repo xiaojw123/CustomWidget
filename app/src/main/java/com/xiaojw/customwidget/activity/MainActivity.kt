@@ -9,13 +9,15 @@ import android.view.WindowManager
 import android.widget.TextView
 import com.xiaojw.customwidget.R
 import com.xiaojw.customwidget.util.ScreenSize
-
 class MainActivity : BaseActivity() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+    override fun getLayoutRes(): Int {
+        return R.layout.activity_main
+    }
+
+    override fun initView() {
         val wm = getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val display = wm.defaultDisplay
         val metrics = DisplayMetrics()
@@ -44,6 +46,11 @@ class MainActivity : BaseActivity() {
     fun gotoCirleRecycler(view: View) {
         startActivity(Intent(this@MainActivity,CircleRecyclerActivity::class.java))
 
+
+    }
+
+    fun gotoBmp(view: View) {
+        startActivity(Intent(this@MainActivity,BmpActivity::class.java))
 
     }
 }

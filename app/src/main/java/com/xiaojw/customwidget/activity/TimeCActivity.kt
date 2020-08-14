@@ -1,13 +1,15 @@
 package com.xiaojw.customwidget.activity
 
-import android.app.Activity
-import android.os.Bundle
 import com.xiaojw.customwidget.R
 
 class TimeCActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_time_c)
+
+
+    override fun getLayoutRes(): Int {
+        return R.layout.activity_time_c
+    }
+
+    override fun initView() {
     }
 }

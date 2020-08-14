@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+            android:shortcutId="add_pic"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:shortcutShortLabel="@string/water_mark"
+            android:shortcutLongLabel="@string/water_mark"
+            android:shortcutDisabledMessage="@string/water_mark"
+            >
+
+
+
+    <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.xiaojw.customwidget"
+            android:targetClass="com.xiaojw.customwidget.activity.BmpActivity" />
+
+    <categories android:name="android.shortcut.conversation" />
+</shortcut>
+
+    <shortcut
+            android:shortcutId="add_header"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:shortcutShortLabel="@string/view_header"
+            android:shortcutLongLabel="@string/view_header"
+            >
+
+
+
+        <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.xiaojw.customwidget"
+                android:targetClass="com.xiaojw.customwidget.activity.NonRectImgActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+
+</shortcuts>

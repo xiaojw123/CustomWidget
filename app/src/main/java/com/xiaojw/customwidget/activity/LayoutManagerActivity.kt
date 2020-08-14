@@ -10,6 +10,7 @@ import com.xiaojw.customwidget.R
 import com.xiaojw.customwidget.util.APPLOG
 import com.xiaojw.customwidget.util.DrawableUtil
 import com.xiaojw.customwidget.widget.lm.CardLayoutManager
+import com.xiaojw.customwidget.widget.lm.EchelonLayoutManager
 
 
 class LayoutManagerActivity : BaseActivity() {
@@ -24,19 +25,16 @@ class LayoutManagerActivity : BaseActivity() {
         "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577768748961&di=498e1688eb74862e432d514f389d5e29&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190617%2F356e979bca0e49bba22b84ae53974a63.jpeg"
     )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_layout_manager)
-        val recylerView: RecyclerView = findViewById(R.id.lm_recyclerview)
-        recylerView.layoutManager = CardLayoutManager()
-        recylerView.adapter = DataAdapter()
 
-//        LinearLayoutManager
-
+    override fun getLayoutRes(): Int {
+        return R.layout.activity_layout_manager
     }
 
-
-
+    override fun initView() {
+        val recylerView: RecyclerView = findViewById(R.id.lm_recyclerview)
+        recylerView.layoutManager = EchelonLayoutManager()
+        recylerView.adapter = DataAdapter()
+    }
 
 
     inner class DataAdapter : RecyclerView.Adapter<DataHolder>() {
