@@ -1,8 +1,12 @@
 package com.xiaojw.customwidget.widget.lm;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.xiaojw.customwidget.util.APPLOG;
 
@@ -28,6 +32,12 @@ public class CardLayoutManager extends RecyclerView.LayoutManager {
         return new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
 
+    @Override
+    public void onAttachedToWindow(RecyclerView view) {
+        super.onAttachedToWindow(view);
+           FrameLayout.LayoutParams params= (FrameLayout.LayoutParams) view.getLayoutParams();
+           params.gravity=Gravity.CENTER_VERTICAL;
+    }
 
     @Override
     public boolean canScrollHorizontally() {

@@ -1,8 +1,8 @@
 package com.xiaojw.customwidget.activity
 
 import android.graphics.Color
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
@@ -32,7 +32,8 @@ class CircleRecyclerActivity : BaseActivity() {
     }
 
     override fun initView() {
-        cr_menu_rlv.layoutManager = LinearLayoutManager(this)
+        cr_menu_rlv.layoutManager =
+            androidx.recyclerview.widget.LinearLayoutManager(this)
         cr_menu_rlv.setViewMode(CircularViewMode())
         cr_menu_rlv.setNeedLoop(true)
         cr_menu_rlv.setNeedCenterForce(true)
@@ -52,7 +53,7 @@ class CircleRecyclerActivity : BaseActivity() {
 
 
     inner class CircleRecylcerAdapter(data: List<String>) :
-        RecyclerView.Adapter<CircleViewHodler>() {
+        androidx.recyclerview.widget.RecyclerView.Adapter<CircleViewHodler>() {
 
 
         var mData: List<String>
@@ -65,7 +66,7 @@ class CircleRecyclerActivity : BaseActivity() {
         override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CircleViewHodler {
 
             val container = FrameLayout(this@CircleRecyclerActivity)
-            val params1 = RecyclerView.LayoutParams(
+            val params1 = androidx.recyclerview.widget.RecyclerView.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
@@ -99,7 +100,7 @@ class CircleRecyclerActivity : BaseActivity() {
 
     }
 
-    inner class CircleViewHodler(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class CircleViewHodler(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         var itemTv: TextView
 
